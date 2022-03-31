@@ -1,0 +1,21 @@
+<app-sport-card></app-sport-card>
+<hr>
+<ul class="flex-container">
+    <li class="list-group-item d-flex" *ngFor="let card of cardsListCollection let last = last">
+        <div class="card">
+            <div class="teamname" data-toggle="tooltip" title="Team Name">{{card.teamName}}</div>
+            <div class="sportCardDts">
+                <img class="sportCardImg" alt="footbal">
+                <p class="playerNumber" data-toggle="tooltip" title="Player Number">#{{card.playerNumber}}</p>
+                <h5 class="playerName" data-toggle="tooltip" title="Player Name">
+                    <span>{{card.firstName}}</span>&nbsp;<span>{{card.lastName}}</span></h5>
+                <span class="estimatedvalue badge bg-primary rounded-pill" title="Estimated Value"
+                    data-toggle="tooltip">{{card.estimatedValue | currency}}</span>
+            </div>
+            <div class="flex-justify-content-center">
+                <button type="submit" mat-raised-button color="primary" (click)="deleteHander(card)">Delete</button>
+            </div>     
+        </div>
+        <span id="scrollView" *ngIf="last"></span>
+    </li>
+</ul>

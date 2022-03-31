@@ -1,0 +1,26 @@
+Case1:
+  A user should be able to enter the first name, last name, player number, team name, and estimated value of the card.
+Case 2:
+  Estimated value is optional.
+Case 3:
+  All other fields are required.
+Case 4:
+  Each field should be properly labeled.
+Case 5:
+  A user will be able to click button to add the trading card.
+Case 6:
+  All fields are cleared when the trading card is added.
+Case 7:
+  The information immediately appears in a list below the input fields.
+Case 8:
+  A user should be able to view the list of trading cards that had been added.
+Case 9:
+  The list should scroll to the last trading card when the list exceeds the view.
+Case 10:
+  A total estimated value is displayed in the top right corner of the screen.
+Case 11:
+  This value is the summation of all estimated values of the trading cards (if provided).
+Case 12:
+  There is an about page with a brief description of the application.
+Case 13:
+  The about page link is displayed in the bottom of the screen

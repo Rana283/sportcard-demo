@@ -1,0 +1,182 @@
+ul>li>div.card:hover {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 1px 1px #092e6d;
+}
+
+@media (max-width: 425px) {
+  .flex-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  ul>li {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    border: solid #ac172b 10px;
+    margin: 2px;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  ul>li>div.card {
+    width: 100%;
+    margin: 5px;
+    background-color: #092e6d;
+    opacity: 0.6;
+  }
+
+  ul>li>div.card .title {
+    background-color: #af1f22;
+    width: 100%;
+    height: 100px;
+  }
+
+  ul>li>div.card .teamname {
+    color: #e3e3e3;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  ul>li>div.card .playerNumber {
+    width: 100%;
+    color: white;
+    font-size: x-large;
+  }
+
+  ul>li>div.card .sportCardImg {
+    background-image: url(../../assets/footbal.png);
+    background-repeat: no-repeat;
+    width: 150px;
+  }
+
+  ul>li>div.card .playerName {
+    width: 100%;
+    color: white;
+    font-size: large;
+  }
+
+  ul>li>div.card .estimatedvalue {
+    border-radius: 5mm;
+    margin: auto;
+    font-size: large;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  ul>li {
+    text-align: center;
+    display: inline-block;
+    border: solid #ac172b 10px;
+    margin: 2px;
+    padding: 0px;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  ul>li>div.card {
+    width: 100%;
+    margin: 5px;
+    background-color: #092e6d;
+    opacity: 0.6;
+  }
+
+  ul>li>div.card .title {
+    background-color: #af1f22;
+    width: 100%;
+    height: 100px;
+  }
+
+  ul>li>div.card .teamname {
+    color: #e3e3e3;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  ul>li>div.card .playerNumber {
+    width: 100%;
+    color: white;
+    font-size: x-large;
+  }
+
+  ul>li>div.card .sportCardImg {
+    background-image: url(../../assets/footbal.png);
+    background-repeat: no-repeat;
+    width: 150px;
+  }
+
+  ul>li>div.card .playerName {
+    width: 100%;
+    color: white;
+    font-size: large;
+  }
+
+  ul>li>div.card .estimatedvalue {
+    border-radius: 5mm;
+    margin: auto;
+    font-size: large;
+  }
+}
+
+@media (max-width: 2500px) {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  ul>li {
+    text-align: center;
+    display: inline-block;
+    border: solid #ac172b 10px;
+    margin: 2px;
+    padding: 0px;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  ul>li>div.card {
+    width: 100%;
+    margin: 5px;
+    opacity: 0.6;
+    background-color: #092e6d;
+  }
+
+  ul>li>div.card .teamname {
+    color: #e3e3e3;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  ul>li>div.card .playerNumber {
+    color: white;
+    font-size: x-large;
+  }
+
+  ul>li>div.card .sportCardImg {
+    content: url('../../assets/footbal.png');
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+  }
+
+  ul>li>div.card .playerName {
+    color: white;
+    font-size: large;
+  }
+
+  ul>li>div.card .estimatedvalue {
+    border-radius: 5mm;
+    margin: auto;
+    font-size: large;
+  }
+}

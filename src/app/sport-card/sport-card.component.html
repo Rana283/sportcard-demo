@@ -1,0 +1,77 @@
+<!-- Flex box UI-->
+<div class="justify-content-md-center flex-justify-content-center">
+    <div class="justify-content-md-center flex-justify-content-center">
+        <form [formGroup]="sportCardForm" (ngSubmit)="addCard()">
+            <div class="form-group">
+                <label class="required-field" for="first-name">First Name</label>
+                <input type="text" formControlName="firstName" required id="first-name" name="firstName" minlength="3" maxlength="20"
+                    placeholder="Enter Firstname">
+            </div>
+            <div class="form-group">
+                <label class="required-field" for="lastName">Last Name</label>
+                <input type="text" formControlName="lastName" name="lastName" required minlength="2" maxlength="20"
+                    placeholder="Enter Lastname">
+            </div>
+            <div class="form-group">
+                <label class="required-field" for="player-number">Player Number</label>
+                <input type="text" id="player-number" numbersOnly  formControlName="playerNumber" maxlength="3" required
+                    placeholder="Player Number">
+            </div>
+            <div class="form-group">
+                <label class="required-field" for="team-name">Team Name</label>
+                <input type="text" id="team-name" formControlName="teamName" required placeholder="Team Name" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="estimated-value">Estimated Value</label>
+                <input type="text" id="estimated-value" numbersOnly formControlName="estimatedValue" placeholder="$" maxlength="2">
+            </div>
+            <div class="btnholder">
+                <button type="submit" [disabled]="!sportCardForm.valid" mat-raised-button
+                    color="primary">addCard</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Material UI form-->
+<!-- <div class="d-flex justify-content-md-center flex-justify-content-center">
+    <form [formGroup]="sportCardForm" (ngSubmit)="addCard()">
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>First name</mat-label>
+                <input matInput type="text" formControlName="firstName" required id="first-name" name="firstName"
+                    minlength="4" placeholder="Enter Firstname">
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput type="text" formControlName="lastName" name="lastName" required minlength="2"
+                placeholder="Enter Lastname">
+        </mat-form-field>
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Player Number</mat-label>
+                <input matInput type="text" id="player-number" formControlName="playerNumber" maxlength="3" required
+                    placeholder="Player Number">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Team Name</mat-label>
+                <input matInput type="text" id="team-name" formControlName="teamName" required placeholder="Team Name">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Estimated Value</mat-label>
+                <input matInput type="text" id="estimated-value" type="text" formControlName="estimatedValue"
+                    placeholder="$">
+
+            </mat-form-field>
+        </div>
+        <div class="btnholder">
+            <button type="submit" [disabled]="!sportCardForm.valid" mat-raised-button color="primary">addCard</button>
+        </div>
+    </form>
+</div> -->

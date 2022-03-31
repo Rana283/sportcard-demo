@@ -1,0 +1,16 @@
+.flex-container {
+  padding: 10px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.aboutus {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  overflow-x: hidden;
+  content: url('../../assets/aboutus.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
