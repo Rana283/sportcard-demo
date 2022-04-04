@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NumbersOnlyDirective } from './components/numbers-only.directive';
+import { SportCardService } from './services/sport-card.service';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { NumbersOnlyDirective } from './components/numbers-only.directive';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  providers:[SportCardService],
   declarations: [AppComponent,SportCardComponent, CardsListComponent, TotalValueComponent, HeaderComponent, FooterComponent, AboutUsComponent, NumbersOnlyDirective],
   bootstrap: [AppComponent],
 })

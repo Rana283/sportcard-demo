@@ -1,7 +1,8 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
-import { deleteCardByPlayerName } from '../state/cards.actions';
+import { SportCardService } from '../services/sport-card.service';
+import { deleteCardByPlayerName, getCards, storeCard } from '../state/cards.actions';
 import { getCardCollection } from '../state/cards.selectors';
 
 @Component({
@@ -12,17 +13,19 @@ import { getCardCollection } from '../state/cards.selectors';
 export class CardsListComponent implements OnInit {
   cardsListCollection: any = [];
   constructor(
-    private store: Store
+    private store: Store,
+    private SportCardService: SportCardService
   ) {
     this.store.select(getCardCollection).pipe(
     ).subscribe(data =>
       this.scrollToView(data));
-      console.log("removed");
   }
   ngOnInit(): void {
-      this.store.select(getCardCollection).pipe().subscribe(data =>{
-        console.log("removed");
-      })
+    this.store.select(getCardCollection).pipe().subscribe(data => {
+      console.log("removedSussFully");
+    })
+    this.SportCardService.getAllCards().subscribe(collection =>
+      this.store.dispatch(getCards({collection})))
   }
   destroy$: Subject<boolean> = new Subject<boolean>();
 
@@ -33,15 +36,15 @@ export class CardsListComponent implements OnInit {
     if (scrollElement)
       scrollElement.scrollIntoView();
   }
-/* Destory hook calls once when it is  out of scope*/
-  ngOnDestroy(){
-      this.destroy$.next(true);
-      this.destroy$.unsubscribe();
+  /* Destory hook calls once when it is  out of scope*/
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
   }
 
-  deleteHander(data){
+  deleteHander(data) {
     const playerNumber = data.playerNumber;
-    this.store.dispatch(deleteCardByPlayerName({playerNumber}))
+    this.store.dispatch(deleteCardByPlayerName({ playerNumber }))
   }
 
 }
